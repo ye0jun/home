@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1.0, user-scalable=0">
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <style>
+
+    .btn {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div id="loading">
+    <img src="/images/puff.svg" alt="" id="loadingSVG">
+  </div>
+  <div class="container d-flex h-100">
+    <div class="align-self-center w-100">
+      <div class="col-12 mx-auto">
+        <div class="card align-items-center">
+          <div class="card-body">
+            <div class="card-block text-center">
+              <h4 class="card-title">Airconditional Control</h4>
+              <div class="btn-group btn-group-toggle pb-3 w-100" data-toggle="buttons">
+                <label class="btn btn-primary active w-50" id="powerOn">
+                  <input type="radio" name="power" value="on" autocomplete="off" checked> On
+                </label>
+                <label class="btn btn-primary w-50" id="powerOff">
+                  <input type="radio" name="power" value="off" autocomplete="off"> Off
+                </label>
+              </div>
+
+              <div style="width : 100%;" class="pb-3">
+                <button class="btn btn-primary" style="width : 28%;" id="temperatureDown"><i class="fas fa-angle-left"></i></button>
+                <button class="btn btn-outline-primary" style="width : 40%;" id="temperatureNumber">18</button>
+                <button class="btn btn-primary" style="width : 28%;" id="temperatureUp"><i class="fas fa-angle-right"></i></button>
+              </div>
+
+              <div class="btn-group btn-group-toggle pb-3 w-100" data-toggle="buttons">
+                <label class="btn btn-primary w-25 active" id="mode_auto">
+                  <input type="radio" autocomplete="off" name="mode" value="auto" checked>자동
+                </label>
+                <label class="btn btn-primary w-25" id="mode_cool">
+                  <input type="radio" autocomplete="off" name="mode" value="cool">냉방
+                </label>
+                <label class="btn btn-primary w-25" id="mode_dehumidification">
+                  <input type="radio" autocomplete="off" name="mode" value="dehumidification">제습
+                </label>
+                <label class="btn btn-primary w-25" id="mode_justWind">
+                  <input type="radio" autocomplete="off" name="mode" value="justwind">송풍
+                </label>
+              </div>
+
+              <div class="btn-group btn-group-toggle pb-3 w-100" data-toggle="buttons" id="divWind">
+                <label class="btn btn-primary w-25 active" id="wind_auto">
+                  <input type="radio" autocomplete="off" name="wind" value="auto" checked>자동
+                </label>
+                <label class="btn btn-primary w-25" id="wind_low">
+                  <input type="radio" autocomplete="off" name="wind" value="low">약풍
+                </label>
+                <label class="btn btn-primary w-25" id="wind_mid">
+                  <input type="radio" autocomplete="off" name="wind" value="mid">중풍
+                </label>
+                <label class="btn btn-primary w-25" id="wind_high">
+                  <input type="radio" autocomplete="off" name="wind" value="high">강풍
+                </label>
+              </div>
+
+              <div style="width : 100%;" class="pb-3">
+                <button id="wing_horizontal" type="button" class="btn btn-primary wingControl" value="h" style="width : 49%;" data-toggle="button"
+                  aria-pressed="false" autocomplete="off">
+                  <i class="fas fa-arrows-alt-h"></i>
+                </button>
+                <button id="wing_vertical" type="button" class="btn btn-primary wingControl" value="v" style="width : 49%;" data-toggle="button"
+                  aria-pressed="false" autocomplete="off">
+                  <i class="fas fa-arrows-alt-v"></i>
+                </button>
+              </div>
+
+              <button type="button" id="addOnClean" class="btn btn-primary w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Clean
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script src="/javascripts/airconditional.js"></script>
+  <script src="/javascripts/airconditional_button.js"></script>
+</body>
+
+</html>
